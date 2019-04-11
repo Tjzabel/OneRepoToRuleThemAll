@@ -1,14 +1,20 @@
 FROM node:10
 
-# Build the app
-COPY ./ /app
-COPY ./package.json /app/package.json
+LABEL maintainer "Society of Software Engineers"
 
 # API_ROOT `--build-arg=api_root=http://localhost:3000/api/v2`
 ARG api_root
 ENV API_ROOT $api_root
 
-WORKDIR /app
-RUN rm -rf node_modules && npm install --warn
+RUN echo fs.inotify.max_user_watches=582222 >> /etc/sysctl.conf
 
-CMD ["npm", "start", "--host", "0.0.0.0"]
+# refresh container when changes occur
+RUN npm install -g nodemon
+
+# Build the app
+COPY ./ /app
+
+WORKDIR /app
+RUN rpm install --warn
+
+CMD [ "nodemon", "server.js" ]

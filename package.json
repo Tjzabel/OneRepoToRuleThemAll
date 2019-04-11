@@ -51,7 +51,7 @@
     "react-toggle": "^4.0.2",
     "reactstrap": "^5.0.0",
     "redux": "^3.7.2",
-    "redux-devtools": "^3.4.1",
+    "redux-devtools": "^3.5.0",
     "redux-thunk": "^2.2.0",
     "sse-api-client": "git+https://github.com/rit-sse/api-client.git",
     "styled-components": "^3.2.3",
@@ -59,7 +59,7 @@
     "yup": "^0.26.6"
   },
   "devDependencies": {
-    "babel-core": "^6.25.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.1",
     "babel-plugin-react-transform": "^2.0.2",
@@ -83,7 +83,7 @@
     "html-loader": "^0.4.5",
     "html-webpack-plugin": "^2.28.0",
     "markdown-loader": "^2.0.2",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.11.0",
     "raw-loader": "^0.5.1",
     "resolve-url-loader": "^1.6.1",
     "sass-loader": "^6.0.6",
